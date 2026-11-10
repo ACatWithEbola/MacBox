@@ -343,7 +343,7 @@ class MainViewController: NSViewController {
                     }
                     // Get the 86Box bundle version
                     if let bundleVersion = bundle.infoDictionary?["CFBundleVersion"] as? String {
-                        emulatorBuildVer = String((bundleVersion).suffix(4))
+                        emulatorBuildVer = String(bundleVersion.split(separator: ".").last ?? "0")
                     }
                 }
             }

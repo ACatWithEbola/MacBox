@@ -357,7 +357,7 @@ class VersionManagerViewController: NSViewController {
                 }
                 // Get the 86Box bundle version
                 if let bundleVersion = bundle.infoDictionary?["CFBundleVersion"] as? String {
-                    binaryBuildVer = String((bundleVersion).suffix(4))
+                    binaryBuildVer = String(bundleVersion.split(separator: ".").last ?? "0")
                 }
             }
             
